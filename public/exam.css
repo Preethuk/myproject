@@ -1,0 +1,23 @@
+.section-1{
+
+    width: 500px;
+    height: 500px;
+    background-color: rgb(162, 226, 43);
+
+}
+@media screen and (max-width:600px) {
+    .section-1{
+   
+       background-color: lightblue;
+    }
+}
+     /* @media only screen and (max-width: 600px) {
+        .section-1{
+    
+          background-color: lightblue;
+        }
+      } */
+    span {
+        display: none;
+    }
+                             
