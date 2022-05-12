@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useImperativeHandle,forwardRef, memo } from 'react'
 
-export default function button() {
-    console.log("button loged");
+ const Button =forwardRef((props,ref) =>{
+    console.log("Button ",props.name);
+    useImperativeHandle(ref,()=>({
+       HandleClick
+    }),[])
+  
+    const HandleClick=()=>{
+        return console.log('hgvmjjhk')
+    }
+    
+    
   return (
-    <button{...props}>{props.children}</button>
+        <button ref={ref} {...props} >{props.children}</button>
   )
-}
+})
+
+
+export default memo(Button)
