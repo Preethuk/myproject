@@ -1,0 +1,13 @@
+.NavLink{
+    background-color: rgb(76, 0, 255);
+    color:rgb(67, 180, 32);
+   
+}
+
+.item{
+    text-decoration: none;
+    padding: 5px;
+}
+.active{
+    background-color: rgb(0, 38, 255);
+}

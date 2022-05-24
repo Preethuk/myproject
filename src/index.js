@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
+import Router from './pages/router';
 import reportWebVitals from './reportWebVitals';
-import ErrorBoundary from './errorboundaries';
-const name="preethu";
-
+import ErrorBoundary from './errorboundary';
+import router from './pages/router';
+const name="preethu"
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const intialvalue ={name:"preethu",age:24,place:"pkl"}
+export const UserContex =React.createContext(intialvalue)
 root.render(
   <ErrorBoundary>
+ <UserContex.Provider value={intialvalue}>
+   <Router/>
+   </UserContex.Provider>
     
-    <App value={name} />
-
   </ErrorBoundary>
 );
 
